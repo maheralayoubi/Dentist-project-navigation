@@ -22,12 +22,13 @@
     }
     .menu{
         display: flex;
+        margin: 0 10px;
     }
     .menu ul{
         display: flex;
         height: 30px;
         margin-top: 15px;
-        height: auto;
+
     }
     .menu ul li{
         list-style: none;
@@ -48,6 +49,7 @@
     /* CALL US */
     .call-us{
         display: flex;
+           margin: 0 10px;
     }
     .call-us i{
         width: 16px;
@@ -71,14 +73,14 @@
         font-size: 11px;
         font-family: YuGothic;
     }
-    .button button{
+    .btn div{
         margin-left: 15px;
-        margin-top: 5px;
         background: transparent linear-gradient(102deg, #F5D23C 0%, #EBC841 62%, #FA8C5A 100%) 0% 0% no-repeat padding-box;
         border: none;
         width: 182px;
-       height: 40px;
-       border-radius: 4px;
+        height: 40px;
+        border-radius: 4px;
+        padding: 5px 10px;
     }
     .button span{
         font-size: 14px;
@@ -93,6 +95,10 @@
     }
 
     @media (max-width: 767px) {
+          .menu .logo img{
+
+              margin-left: -10px;
+    }
         .list{
           display: none;
         }
@@ -102,16 +108,25 @@
        cursor: pointer;
     }
         .list ul{
-            position: absolute;
-            top: 70px;
+           position: absolute;
+            top: 50px;
+            left: -60px;
             display: block;
             text-align: center;
-            height: 0;
+            background: white;
+             min-width: 499px;
+             height: 200px;
         }
         .list ul li{
             border: none;
             margin: 10px 0;
+             font-weight: bold;
+
         }
+        .list ul li a{
+        color: #eccc41;
+          border-bottom: 1px solid black;
+    }
         .menu ul li:nth-child(5){
         border-right: none;
     }
@@ -132,8 +147,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
+    <nav class="navbar"
             <div class="row w-100">
                 <div class="menu">
                     <div class="logo">
@@ -154,14 +168,13 @@
                             <i class="fa fa-phone"></i><span>FREE CALL</span> <strong>0000-00-0000</strong> <br>
                             <p>営業時間 (平日9:00 ~ 17:00)</p>
                         </div>
-                        <div class="button">
-                            <button style="color: white;" type="button"><svg width="28px" hieght="28px" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="telegram-plane" class="svg-inline--fa fa-telegram-plane fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path></svg> お問い合わせ</button>
+                        <div class="btn">
+                            <div style="color: white;"><svg width="28px" hieght="28px" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="telegram-plane" class="svg-inline--fa fa-telegram-plane fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path></svg> お問い合わせ</div>
                         </div>
                 </div>
                 <div class="click ml-auto">
                     <i class="fa fa-bars"></i>
                </div>
-            </div>
         </div>
     </nav>
 
@@ -171,6 +184,7 @@
 
     <script src="bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="jquery.js"></script>
 
     <script>
